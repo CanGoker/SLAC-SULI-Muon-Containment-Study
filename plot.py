@@ -33,7 +33,8 @@ def plot_segments(input_file, numID,  output_file):
                      segment['y_end']),
                     (segment['z_start'],
                      segment['z_end']),
-                    color = color_by_PID(segment_pid)
+                    color = color_by_PID(segment_pid),
+                    alpha = 0.5
                     )
         plt.savefig(output_file)
 
@@ -76,20 +77,21 @@ def plot_segmentx(input_file, numID,  output_file):
                      segment['y_end']),
                     (segment['z_start'],
                      segment['z_end']),
-                    color = color_by_PID(segment_pid)
+                    color = color_by_PID(segment_pid),
+                    alpha = 0.5
                     )
         ax.vlines(
             x=min(event_segments['y_start']),
             ymin=min(event_segments['z_start']),
-            ymax=min(event_segments['z_start']) + 3000,
+            ymax=min(event_segments['z_start']) + 300,
             colors='red',                # color of the vertical line
             linestyles='solid',           # style of the vertical line (optional)
             linewidth=1                    # width of the vertical line (optional)
                 )
         ax.vlines(
-            x=min(event_segments['y_start']) + 7000,
+            x=min(event_segments['y_start']) + 700,
             ymin=min(event_segments['z_start']),
-            ymax=min(event_segments['z_start']) + 3000,
+            ymax=min(event_segments['z_start']) + 300,
             colors='red',                # color of the vertical line
             linestyles='solid',           # style of the vertical line (optional)
             linewidth=1                    # width of the vertical line (optional)
@@ -97,15 +99,15 @@ def plot_segmentx(input_file, numID,  output_file):
         ax.hlines(
             y=min(event_segments['z_start']),
             xmin=min(event_segments['y_start']),
-            xmax=min(event_segments['y_start']) + 7000,
+            xmax=min(event_segments['y_start']) + 700,
             colors='red',                # color of the vertical line
             linestyles='solid',           # style of the vertical line (optional)
             linewidth=1                    # width of the vertical line (optional)
                 )
         ax.hlines(
-            y=min(event_segments['z_start']) + 3000,
+            y=min(event_segments['z_start']) + 300,
             xmin=min(event_segments['y_start']),
-            xmax=min(event_segments['y_start']) + 7000,
+            xmax=min(event_segments['y_start']) + 700,
             colors='red',                # color of the vertical line
             linestyles='solid',           # style of the vertical line (optional)
             linewidth=1                    # width of the vertical line (optional)
@@ -155,20 +157,21 @@ def plot_segmenty(input_file, numID,  output_file):
                      segment['x_end']),
                     (segment['z_start'],
                      segment['z_end']),
-                    color = color_by_PID(segment_pid)
+                    color = color_by_PID(segment_pid),
+                    alpha = 0.5
                     )
         ax.vlines(
             x=min(event_segments['x_start']),
             ymin=min(event_segments['z_start']),
-            ymax=min(event_segments['z_start']) + 3000,
+            ymax=min(event_segments['z_start']) + 300,
             colors='red',                # color of the vertical line
             linestyles='solid',           # style of the vertical line (optional)
             linewidth=1                    # width of the vertical line (optional)
                 )
         ax.vlines(
-            x=min(event_segments['x_start']) + 5000,
+            x=min(event_segments['x_start']) + 500,
             ymin=min(event_segments['z_start']),
-            ymax=min(event_segments['z_start']) + 3000,
+            ymax=min(event_segments['z_start']) + 300,
             colors='red',                # color of the vertical line
             linestyles='solid',           # style of the vertical line (optional)
             linewidth=1                    # width of the vertical line (optional)
@@ -176,15 +179,15 @@ def plot_segmenty(input_file, numID,  output_file):
         ax.hlines(
             y=min(event_segments['z_start']),
             xmin=min(event_segments['x_start']),
-            xmax=min(event_segments['x_start']) + 5000,
+            xmax=min(event_segments['x_start']) + 500,
             colors='red',                # color of the vertical line
             linestyles='solid',           # style of the vertical line (optional)
             linewidth=1                    # width of the vertical line (optional)
                 )
         ax.hlines(
-            y=min(event_segments['z_start']) + 3000,
+            y=min(event_segments['z_start']) + 300,
             xmin=min(event_segments['x_start']),
-            xmax=min(event_segments['x_start']) + 5000,
+            xmax=min(event_segments['x_start']) + 500,
             colors='red',                # color of the vertical line
             linestyles='solid',           # style of the vertical line (optional)
             linewidth=1                    # width of the vertical line (optional)
@@ -233,36 +236,37 @@ def plot_segmentz(input_file, numID,  output_file):
                      segment['x_end']),
                     (segment['y_start'],
                      segment['y_end']),
-                    color = color_by_PID(segment_pid)
+                    color = color_by_PID(segment_pid),
+                    alpha = 0.5
                     )
         ax.vlines(
             x=min(event_segments['x_start']),
             ymin=min(event_segments['y_start']),
-            ymax=min(event_segments['y_start']) + 7000,
+            ymax=min(event_segments['y_start']) + 700,
             colors='red',                # color of the vertical line
             linestyles='solid',           # style of the vertical line (optional)
             linewidth=1                    # width of the vertical line (optional)
                 )
         ax.vlines(
-            x=min(event_segments['x_start']) + 5000,
+            x=min(event_segments['x_start']) + 500,
             ymin=min(event_segments['y_start']),
-            ymax=min(event_segments['y_start']) + 7000,
-            colors='red',                # color of the vertical line
-            linestyles='solid',           # style of the vertical line (optional)
-            linewidth=1                    # width of the vertical line (optional)
-                )
-       ax.hlines(
-            y=min(event_segments['y_start']),
-            xmin=min(event_segments['x_start']),
-            xmax=min(event_segments['x_start']) + 5000,
+            ymax=min(event_segments['y_start']) + 700,
             colors='red',                # color of the vertical line
             linestyles='solid',           # style of the vertical line (optional)
             linewidth=1                    # width of the vertical line (optional)
                 )
         ax.hlines(
-            y=min(event_segments['y_start']) + 7000,
+            y=min(event_segments['y_start']),
             xmin=min(event_segments['x_start']),
-            xmax=min(event_segments['x_start']) + 5000,
+            xmax=min(event_segments['x_start']) + 500,
+            colors='red',                # color of the vertical line
+            linestyles='solid',           # style of the vertical line (optional)
+            linewidth=1                    # width of the vertical line (optional)
+                )
+        ax.hlines(
+            y=min(event_segments['y_start']) + 700,
+            xmin=min(event_segments['x_start']),
+            xmax=min(event_segments['x_start']) + 500,
             colors='red',                # color of the vertical line
             linestyles='solid',           # style of the vertical line (optional)
             linewidth=1                    # width of the vertical line (optional)
